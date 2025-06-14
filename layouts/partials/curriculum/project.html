@@ -1,0 +1,16 @@
+<div>
+  <h3>{{ .title }}</h3>
+  <p>{{ .city }} | {{ .start_date }} - {{ if .end_date }}{{ .end_date }}{{ else }}Present{{ end }}</p>
+  {{ if .website }}
+    <p><a href="{{ .website }}" target="_blank">Мой GitHub</a></p>
+  {{ end }}
+  <ul>
+    {{ range .responsibilities }}
+      <li>{{ . | safeHTML }}</li>
+    {{ end }}
+  </ul>
+  {{ if .technologies }}
+    <p><strong>Технологии:</strong> {{ delimit .technologies ", " }}</p>
+  {{ end }}  
+
+</div>

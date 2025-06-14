@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Опыт работы on Код, инфраструктура, опыт</title>
+    <link>http://localhost:1313/ru/curriculum/learning/</link>
+    <description>Recent content in Опыт работы on Код, инфраструктура, опыт</description>
+    <generator>Hugo</generator>
+    <language>ru-RU</language>
+    <atom:link href="http://localhost:1313/ru/curriculum/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Обучение Android developer</title>
+      <link>http://localhost:1313/ru/curriculum/learning/android_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ru/curriculum/learning/android_learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Обучение DevOps, freelance</title>
+      <link>http://localhost:1313/ru/curriculum/learning/devops_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ru/curriculum/learning/devops_learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Обучение, pet-проекты</title>
+      <link>http://localhost:1313/ru/curriculum/learning/python_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ru/curriculum/learning/python_learning/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+dateFormat:
+  other: "January 2006"
+present:
+  other: "По настоящее время"
+myGitHub:
+  other: "Мой GitHub"
+technologies:
+  other: "Технологии"
+experience:
+  other: "Опыт работы"
+education:
+  other: "Образование, курсы"
+projects:
+  other: "Проекты и фриланс"
+skills:
+  other: "Ключевые навыки"
+about:
+  other: "Обо мне"

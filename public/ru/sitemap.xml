@@ -128,6 +128,8 @@
                 href="http://localhost:1313/ru/"
                 />
   </url><url>
+    <loc>http://localhost:1313/ru/curriculum/education/irespip_learning/</loc>
+  </url><url>
     <loc>http://localhost:1313/ru/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -144,6 +146,10 @@
                 hreflang="ru-RU"
                 href="http://localhost:1313/ru/categories/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/ru/curriculum/breaks/2024/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ru/curriculum/work/ursip/</loc>
   </url><url>
     <loc>http://localhost:1313/ru/tags/</loc>
     <xhtml:link
@@ -162,7 +168,21 @@
                 href="http://localhost:1313/ru/tags/"
                 />
   </url><url>
+    <loc>http://localhost:1313/ru/curriculum/education/android_learning/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ru/curriculum/education/devops_learning/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ru/curriculum/education/python_learning/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ru/curriculum/breaks/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ru/curriculum/education/</loc>
+  </url><url>
     <loc>http://localhost:1313/ru/curriculum/work/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ru/curriculum/work/gasprom/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ru/curriculum/work/aztech/</loc>
   </url><url>
     <loc>http://localhost:1313/ru/curriculum/work/bibliodata/</loc>
   </url><url>

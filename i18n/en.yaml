@@ -1,0 +1,18 @@
+dateFormat:
+  other: "January 2, 2006"
+present:
+  other: "Present"
+myGitHub:
+  other: "My GitHub"
+technologies:
+  other: "Technologies"
+experience:
+  other: "Work Experience"
+education:
+  other: "Education and Courses"
+projects:
+  other: "Projects and Freelance"
+skills:
+  other: "Key Skills"
+about:
+  other: "About Me"

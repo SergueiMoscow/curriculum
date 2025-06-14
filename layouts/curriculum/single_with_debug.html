@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article>
+  <h1>DEBUG: {{ .Title }}</h1>
+  
+  <div style="border:2px solid blue;padding:10px;">
+    <h3>Debug Info:</h3>
+    <p>Current Page: {{ .Path }}</p>
+    <p>Experience Params: {{ .Params.experience | jsonify }}</p>
+    
+    {{ .Content }}
+  </div>
+
+  {{ if .Params.experience }}
+  <h2>Опыт работы</h2>
+    {{ range $idx, $path := .Params.experience }}
+      <div style="border:1px solid green;margin:10px;padding:10px;">
+        <h4>Processing item #{{ add $idx 1 }}: {{ $path }}</h4>
+        {{ $page := $.Site.GetPage $path }}
+        {{ if $page }}
+          <p style="color:green;">Page found: {{ $page.Path }} ({{ $page.RelPermalink }})</p>
+          {{ partial "curriculum/work" $page.Params }}
+        {{ else }}
+          <p style="color:red;">Page NOT found: {{ $path }}</p>
+          <p>Available work pages:</p>
+          <ul>
+            {{ range where site.Pages "Section" "work" }}
+              <li>{{ .Path }} ({{ .RelPermalink }})</li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+  <p>All site pages:</p>
+<ul>
+  {{ range site.Pages }}
+    <li>{{ .Path }} ({{ .RelPermalink }})</li>
+  {{ end }}
+</ul>
+</article>
+{{ end }}
