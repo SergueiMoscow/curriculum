@@ -1,0 +1,8 @@
+{{ $pages := split (.Get 0) "," }}
+{{ range $pages }}
+  {{ with $.Site.GetPage (trim . " ") }}
+    {{ partial "resume/work" .Params }}
+  {{ else }}
+    {{ errorf "Page not found: %s" . }}
+  {{ end }}
+{{ end }}

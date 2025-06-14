@@ -1,0 +1,11 @@
+<nav class="language-switcher">
+    <ul>
+        {{ range $.Site.Languages }}
+            {{ if ne .Lang $.Lang }}
+                <li>
+                    <a href="{{ $.Site.BaseURL }}{{ .Lang }}/{{ $.RelPermalink }}">{{ .LanguageName }}</a>
+                </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+</nav>

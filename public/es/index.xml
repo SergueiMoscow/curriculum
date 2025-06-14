@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Perspectivas Laborales on Portafolio de Desarrollador</title>
+    <link>http://localhost:1313/es/</link>
+    <description>Recent content in Perspectivas Laborales on Portafolio de Desarrollador</description>
+    <generator>Hugo</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Tue, 13 May 2025 19:45:55 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/es/about/</link>
+      <pubDate>Tue, 13 May 2025 19:45:55 +0300</pubDate>
+      <guid>http://localhost:1313/es/about/</guid>
+      <description>&lt;p&gt;This is the Spanish about page.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>currículum de desarrollador backend de Python</title>
+      <link>http://localhost:1313/es/curriculum/python-backend/</link>
+      <pubDate>Tue, 13 May 2025 19:45:55 +0300</pubDate>
+      <guid>http://localhost:1313/es/curriculum/python-backend/</guid>
+      <description>&lt;p&gt;currículum de desarrollador backend de Python.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Currículum de ingeniero de DevOps</title>
+      <link>http://localhost:1313/es/curriculum/devops/</link>
+      <pubDate>Tue, 13 May 2025 19:45:55 +0300</pubDate>
+      <guid>http://localhost:1313/es/curriculum/devops/</guid>
+      <description>&lt;p&gt;My DevOps experience and skills.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Media Explorador</title>
+      <link>http://localhost:1313/es/projects/media_explorer/</link>
+      <pubDate>Tue, 13 May 2025 19:45:55 +0300</pubDate>
+      <guid>http://localhost:1313/es/projects/media_explorer/</guid>
+      <description>&lt;p&gt;Media Explorador&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

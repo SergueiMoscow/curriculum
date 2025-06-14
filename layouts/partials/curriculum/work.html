@@ -1,0 +1,9 @@
+<div>
+  <h3>{{ .title }} at {{ .company }}</h3>
+  <p>{{ .city }} | {{ .start_date }} - {{ if .current }}{{ .current }}{{ else }}Present{{ end }}</p>
+  <ul>
+    {{ range .responsibilities }}
+      <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</div>
