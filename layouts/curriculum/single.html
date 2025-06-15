@@ -1,8 +1,6 @@
 {{ define "main" }}
 <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 <article>
-    <div>Debug: LanguageCode={{ .Site.LanguageCode }}</div>
-
   {{ if .Params.experience }}
     <h2>{{ i18n "experience" }}</h2>
     {{ range $idx, $path := .Params.experience }}

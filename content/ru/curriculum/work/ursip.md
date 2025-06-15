@@ -19,4 +19,5 @@ technologies:
   - GitLab
   - PostgreSQL
   - Yandex Tracker
+  - Pytest
 ---

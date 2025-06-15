@@ -13,5 +13,14 @@ desc:
   - "Работа на заказ (Freelance)"
   - "Создание учебных и персональных проектов"
 thumbnail: /img/diplomas/devops_200.jpg
-diploma: /img/diplomas/Diplom_DevOps.pdf  
+diploma: /img/diplomas/Diplom_DevOps.pdf
+technologies:
+  - Docker
+  - Terraform
+  - Packer
+  - Vagrant
+  - Prometheus
+  - Grafana
+  - Kubernetes
+
 ---

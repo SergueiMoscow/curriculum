@@ -3,7 +3,6 @@
   <h4>{{ .item.company }}</h4>
   <h5>{{ .item.industry }}</h5>
   {{ $lang := .context.Lang | default "ru" }}
-  <div>Debug (partial/work): Lang={{ .context.Lang }}</div>
   {{ if eq $lang "ru" }}
     <p>{{ .item.city }} | {{ .item.date_str }}</p>
   {{ else }}

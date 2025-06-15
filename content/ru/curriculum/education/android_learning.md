@@ -11,5 +11,9 @@ end_date: "2022-12-31"
 desc:
   - Обучение на курсе Разработчик мобильных приложений на платформе Android
 thumbnail: /img/diplomas/android_200.jpg
-diploma: /img/diplomas/Certificate_Android.pdf  
+diploma: /img/diplomas/Certificate_Android.pdf
+technologies:
+  - Kotlin
+  - Android Studio
+  - Figma
 ---

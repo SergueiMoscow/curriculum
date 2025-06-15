@@ -1,3 +1,6 @@
+{{/*
+    https://devicon.dev/
+*/}}
 <p><strong>{{ i18n "technologies" }}:</strong>
   {{ range $index, $tech := . }}
     {{ if eq $tech "Terraform" }}<i class="devicon-terraform-plain colored"></i>{{ end }}
@@ -14,6 +17,16 @@
     {{ if eq $tech "C++" }}<i class="devicon-cplusplus-plain colored"></i>{{ end }}
     {{ if eq $tech "JQuery" }}<i class="devicon-jquery-plain colored"></i>{{ end }}
     {{ if eq $tech "Kubernetes" }}<i class="devicon-kubernetes-plain colored"></i>{{ end }}
+    {{ if eq $tech "Kotlin" }}<i class="devicon-kotlin-plain colored"></i>{{ end }}
+    {{ if eq $tech "Android Studio" }}<i class="devicon-androidstudio-plain colored"></i>{{ end }}
+    {{ if eq $tech "Figma" }}<i class="devicon-figma-plain colored"></i>{{ end }}
+    {{ if eq $tech "Python" }}<i class="devicon-python-plain colored"></i>{{ end }}
+    {{ if eq $tech "PyCharm" }}<i class="devicon-pycharm-plain colored"></i>{{ end }}
+    {{ if eq $tech "Pytest" }}<i class="devicon-pytest-plain colored"></i>{{ end }}
+    {{ if eq $tech "Packer" }}<i class="devicon-packer-plain colored"></i>{{ end }}
+    {{ if eq $tech "Vagrant" }}<i class="devicon-vagrant-plain colored"></i>{{ end }}
+    {{ if eq $tech "Prometheus" }}<i class="devicon-prometheus-plain colored"></i>{{ end }}
+    {{ if eq $tech "Grafana" }}<i class="devicon-grafana-plain colored"></i>{{ end }}
     {{ $tech }}
     {{ if not (eq $index (sub (len $) 1)) }},{{ end }}
   {{ end }}
