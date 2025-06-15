@@ -147,6 +147,8 @@
                 href="http://localhost:1313/ru/categories/"
                 />
   </url><url>
+    <loc>http://localhost:1313/ru/curriculum/work/alphabet/</loc>
+  </url><url>
     <loc>http://localhost:1313/ru/curriculum/breaks/2024/</loc>
   </url><url>
     <loc>http://localhost:1313/ru/curriculum/work/ursip/</loc>

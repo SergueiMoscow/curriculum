@@ -30,17 +30,24 @@
       <description>&lt;h2 id=&#34;общее-описание-приложения&#34;&gt;Общее описание приложения:&lt;/h2&gt;&#xA;&lt;p&gt;это решение для управления и организации ваших медиафайлов, таких как фотографии, видео и документы. Основное преимущество MediaHub заключается в возможности быстрого и автоматического добавления новых файлов в общее хранилище, что позволяет легко управлять и находить нужные файлы. С MediaHub вы можете быстро находить фотографии по тегам и описаниям, делать их публичными и делиться ими, просто отправляя ссылку. Это идеальное решение для обычных пользователей, которые хотят иметь быстрый и удобный доступ к своим медиафайлам.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Резюме Python Backend разработчика</title>
+      <title>Резюме разработчика</title>
       <link>http://localhost:1313/ru/curriculum/python-backend/</link>
       <pubDate>Tue, 13 May 2025 19:45:55 +0300</pubDate>
       <guid>http://localhost:1313/ru/curriculum/python-backend/</guid>
-      <description>&lt;p&gt;Резюме Python Backend разработчика.&lt;/p&gt;&#xA;&lt;h2 id=&#34;опыт-работы&#34;&gt;Опыт работы&lt;/h2&gt;&#xA;&lt;!-- Блок появится автоматически из шаблона --&gt;</description>
+      <description>&lt;p&gt;Резюме Python Backend разработчика.&lt;/p&gt;&#xA;&lt;!-- Блок появится автоматически из шаблона --&gt;</description>
     </item>
     <item>
       <title></title>
       <link>http://localhost:1313/ru/curriculum/education/irespip_learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/ru/curriculum/education/irespip_learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps-инженер</title>
+      <link>http://localhost:1313/ru/curriculum/work/alphabet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ru/curriculum/work/alphabet/</guid>
       <description></description>
     </item>
     <item>

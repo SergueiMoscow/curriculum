@@ -1,7 +1,8 @@
 ---
 date: "2025-05-13T19:45:55+03:00"
-title: "Резюме Python Backend разработчика"
+title: "Резюме разработчика"
 experience: 
+  - "curriculum/work/alphabet"
   - "curriculum/work/ursip"
   - "curriculum/work/aztech"
   - "curriculum/work/gasprom"
@@ -26,13 +27,12 @@ skills:
 about: |
   Python Backend разработчик с 2+ годами опыта в создании масштабируемых веб-приложений. Специализируюсь на FastAPI, Django и микросервисной архитектуре. Увлечён IoT и разработкой pet-проектов, включая умные устройства на ESP8266. Стремлюсь к чистому коду и автоматизации процессов.  
 contacts:
-  email: "example@example.com"
-  linkedin: "https://linkedin.com/in/your-profile"
-  telegram: "https://t.me/your-username"
+  email: "s_serguei@rambler.ru"
+  linkedin: "https://www.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-%D1%81%D1%83%D1%88%D0%BA%D0%BE%D0%B2-05682863/"
+  telegram: "https://t.me/Serguei_Sushkov"
 layout: "curriculum"
 ---
 
 Резюме Python Backend разработчика.
 
-## Опыт работы
 <!-- Блок появится автоматически из шаблона -->
