@@ -1,4 +1,4 @@
-<div>
+<div class="project-item">
   <h3>{{ .title }}</h3>
   <p>{{ .city }} | {{ .start_date }} - {{ if .end_date }}{{ .end_date }}{{ else }}Present{{ end }}</p>
   {{ if .website }}
@@ -10,7 +10,7 @@
     {{ end }}
   </ul>
   {{ if .technologies }}
-    <p><strong>Технологии:</strong> {{ delimit .technologies ", " }}</p>
+    <p><strong>{{ i18n "technologies" }}:</strong> {{ delimit .technologies ", " }}</p>
   {{ end }}  
 
 </div>

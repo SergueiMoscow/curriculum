@@ -1,5 +1,5 @@
 dateFormat:
-  other: "January 2006"
+  other: "Jan 2006"
 present:
   other: "По настоящее время"
 myGitHub:
@@ -16,3 +16,7 @@ skills:
   other: "Ключевые навыки"
 about:
   other: "Обо мне"
+monthNames:
+  other: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+contacts:
+  other: "Контакты"  

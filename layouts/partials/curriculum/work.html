@@ -1,14 +1,20 @@
-<div>
+<div class="experience-item">
   <h3>{{ .title }}</h3>
   <h4>{{ .company }}</h4>
   <h5>{{ .industry }}</h5>
-  <p>{{ .city }} | {{ .start_date }} - {{ if .end_date }}{{ .end_date }}{{ else }}Present{{ end }}</p>
+  {{ $lang := .Site.LanguageCode }}
+  {{ if eq $lang "ru" }}
+    <p>{{ .city }} | {{ .date_str }}</p>
+  {{ else }}
+    <p>{{ .city }} | {{ .start_date | time.Format (i18n "dateFormat") }} - {{ if .end_date }}{{ .end_date | time.Format (i18n "dateFormat") }}{{ else }}{{ i18n "present" }}{{ end }}</p>
+  {{ end }}
+
   <ul>
     {{ range .responsibilities }}
       <li>{{ . }}</li>
     {{ end }}
   </ul>
   {{ if .technologies }}
-    <p><strong>Технологии:</strong> {{ delimit .technologies ", " }}</p>
+    <p><strong>{{ i18n "technologies" }}:</strong> {{ delimit .technologies ", " }}</p>
   {{ end }}  
 </div>

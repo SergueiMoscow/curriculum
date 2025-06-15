@@ -5,8 +5,8 @@ position: ""
 city: "Mexico"
 website: "https://aztechventures.com/"
 industry: "Software"
-start_date: "2004-01"
-end_date: "2023-03"
+start_date: "2004-01-01"
+end_date: "2023-03-31"
 responsibilities:
   - Создание и сопровождение web-приложений.
   - Оптимизация кода.

@@ -25,6 +25,10 @@ skills:
   - C++
 about: |
   Python Backend разработчик с 2+ годами опыта в создании масштабируемых веб-приложений. Специализируюсь на FastAPI, Django и микросервисной архитектуре. Увлечён IoT и разработкой pet-проектов, включая умные устройства на ESP8266. Стремлюсь к чистому коду и автоматизации процессов.  
+contacts:
+  email: "example@example.com"
+  linkedin: "https://linkedin.com/in/your-profile"
+  telegram: "https://t.me/your-username"
 layout: "curriculum"
 ---
 

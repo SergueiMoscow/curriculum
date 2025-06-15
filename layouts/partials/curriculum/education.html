@@ -1,10 +1,15 @@
-<div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
+<div class="education-item">
   <!-- Левая колонка: текст (75%) -->
-  <div style="flex: 3; min-width: 200px;">
+  <div class="text-content">
     <h3>{{ .title }}</h3>
     <h4>{{ .institution }}</h4>
-    <p>{{ .city }} | {{ .date_str }}</p>
-    <p>{{ .city }} | {{ .start_date | time.Format (i18n "dateFormat") }} - {{ if .end_date }}{{ .end_date | time.Format (i18n "dateFormat") }}{{ else }}{{ i18n "present" }}{{ end }}</p>
+    {{ $lang := .Site.LanguageCode }}
+    {{ if eq $lang "ru" }}
+      <p>{{ .city }} | {{ .date_str }}</p>
+    {{ else }}
+      <p>{{ .city }} | {{ .start_date | time.Format (i18n "dateFormat") }} - {{ if .end_date }}{{ .end_date | time.Format (i18n "dateFormat") }}{{ else }}{{ i18n "present" }}{{ end }}</p>
+    {{ end }}
+
     {{ if .desc }}
     <ul>
       {{ range .desc }}

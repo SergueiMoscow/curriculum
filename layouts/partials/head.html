@@ -1,2 +1,36 @@
-{{ $customCSS := resources.Get "css/custom.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{{ if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="generator" content="Hugo {{ hugo.Version }}">
+{{ with .Site.Params.robots }}{{ range $k, $v := . }}<meta name="robots" content="{{ $v }}">{{ end }}{{ end }}
+<link rel="stylesheet" href="{{ "css/main.min.css" | relURL }}">
+{{ if .Site.Params.customCSS }}
+  {{ range .Site.Params.customCSS }}
+    <link rel="stylesheet" href="{{ . | relURL }}">
+  {{ end }}
+{{ end }}
+{{ with .Site.Params.favicon }}<link rel="shortcut icon" href="{{ . | relURL }}" type="image/x-icon">{{ end }}
+{{ if .Site.Params.canonicalURL }}<link rel="canonical" href="{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}">{{ end }}
+{{ range .AlternativeOutputFormats }}
+  <link rel="{{ .Name }}" href="{{ .Permalink }}" title="{{ .Name }}">
+{{ end }}
+{{ if .Site.Params.openGraph }}
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:locale" content="{{ .Site.LanguageCode }}">
+  <meta property="og:type" content="article">
+  {{ if .IsPage }}
+    <meta property="article:section" content="{{ .Section }}">
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ end }}
+{{ end }}
+{{ if .Site.Params.twitterCards }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ end }}
