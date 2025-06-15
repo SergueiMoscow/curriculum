@@ -1,14 +1,13 @@
 ---
 title: "Программист-разработчик"
 company: "Aztech Ventures"
-position: ""
 city: "Mexico"
 website: "https://aztechventures.com/"
 industry: "Software"
 start_date: "2004-01-01"
 end_date: "2023-03-31"
-date_str: "Январь 2023 - Март 2023"
-
+date_str: "Январь 2004 - Март 2023"
+desc: "Периодическая удалённая работа с перерывами (4–6 месяцев в год активности)."
 responsibilities:
   - Создание и сопровождение web-приложений.
   - Оптимизация кода.
@@ -19,7 +18,8 @@ responsibilities:
 technologies:
   - PHP
   - PostgreSQL
+  - MySQL
   - HTML
   - CSS
-  - JQuery
+  - jQuery
 ---

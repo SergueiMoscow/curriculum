@@ -12,6 +12,9 @@
       <p>{{ .item.city }} | {{ .item.date_str }}</p>
     {{ end }}
   {{ end }}
+  {{ if .item.desc }}
+    <p>{{ .item.desc }}</p>
+  {{ end }}
   <ul>
     {{ range .item.responsibilities }}
       <li>{{ . }}</li>
