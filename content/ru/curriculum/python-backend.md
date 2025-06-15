@@ -1,6 +1,7 @@
 ---
 date: "2025-05-13T19:45:55+03:00"
 title: "Резюме разработчика"
+# lang: ru-RU
 experience: 
   - "curriculum/work/alphabet"
   - "curriculum/work/ursip"

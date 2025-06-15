@@ -1,12 +1,14 @@
 {{ define "main" }}
 <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 <article>
+    <div>Debug: LanguageCode={{ .Site.LanguageCode }}</div>
+
   {{ if .Params.experience }}
-  <h2>{{ i18n "experience" }}</h2>
+    <h2>{{ i18n "experience" }}</h2>
     {{ range $idx, $path := .Params.experience }}
       {{ $page := $.Site.GetPage $path }}
       {{ if $page }}
-        {{ partial "curriculum/work" $page.Params }}
+        {{ partial "curriculum/work" (dict "context" $ "item" $page.Params) }}
       {{ else }}
         <p class="error">Page NOT found: {{ $path }}</p>
         <p>Available work pages:</p>
@@ -20,11 +22,11 @@
   {{ end }}
 
   {{ if .Params.education }}
-  <h2>{{ i18n "education" }}</h2>
+    <h2>{{ i18n "education" }}</h2>
     {{ range $idx, $path := .Params.education }}
       {{ $page := $.Site.GetPage $path }}
       {{ if $page }}
-        {{ partial "curriculum/education" $page.Params }}
+        {{ partial "curriculum/education" (dict "context" $ "item" $page.Params) }}
       {{ else }}
         <p class="error">Page NOT found: {{ $path }}</p>
         <p>Available education pages:</p>
@@ -38,11 +40,11 @@
   {{ end }}
 
   {{ if .Params.projects }}
-  <h2>{{ i18n "projects" }}</h2>
+    <h2>{{ i18n "projects" }}</h2>
     {{ range $idx, $path := .Params.projects }}
       {{ $page := $.Site.GetPage $path }}
       {{ if $page }}
-        {{ partial "curriculum/project" $page.Params }}
+        {{ partial "curriculum/project" (dict "context" $ "item" $page.Params) }}
       {{ else }}
         <p class="error">Page NOT found: {{ $path }}</p>
         <p>Available project pages:</p>
@@ -56,38 +58,38 @@
   {{ end }}
 
   {{ if .Params.skills }}
-  <h2>{{ i18n "skills" }}</h2>
-  <div class="skills">
-    <ul>
-      {{ range .Params.skills }}
-        <li>{{ . }}</li>
-      {{ end }}
-    </ul>
-  </div>
+    <h2>{{ i18n "skills" }}</h2>
+    <div class="skills">
+      <ul>
+        {{ range .Params.skills }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
   {{ end }}
 
   {{ if .Params.about }}
-  <h2>{{ i18n "about" }}</h2>
-  <div class="about">
-    <p>{{ .Params.about | markdownify }}</p>
-  </div>
+    <h2>{{ i18n "about" }}</h2>
+    <div class="about">
+      <p>{{ .Params.about | markdownify }}</p>
+    </div>
   {{ end }}
 
-{{ if .Params.contacts }}
-  <h2>{{ i18n "contacts" }}</h2>
-  <div class="contacts">
-    <ul>
-      {{ if .Params.contacts.email }}
-        <li><i class="fas fa-envelope"></i> <a href="mailto:{{ .Params.contacts.email }}">{{ .Params.contacts.email }}</a></li>
-      {{ end }}
-      {{ if .Params.contacts.linkedin }}
-        <li><i class="fab fa-linkedin"></i> <a href="{{ .Params.contacts.linkedin }}" target="_blank">LinkedIn</a></li>
-      {{ end }}
-      {{ if .Params.contacts.telegram }}
-        <li><i class="fab fa-telegram"></i> <a href="{{ .Params.contacts.telegram }}" target="_blank">Telegram</a></li>
-      {{ end }}
-    </ul>
-  </div>
+  {{ if .Params.contacts }}
+    <h2>{{ i18n "contacts" }}</h2>
+    <div class="contacts">
+      <ul>
+        {{ if .Params.contacts.email }}
+          <li><i class="fas fa-envelope"></i> <a href="mailto:{{ .Params.contacts.email }}">{{ .Params.contacts.email }}</a></li>
+        {{ end }}
+        {{ if .Params.contacts.linkedin }}
+          <li><i class="fab fa-linkedin"></i> <a href="{{ .Params.contacts.linkedin }}" target="_blank">LinkedIn</a></li>
+        {{ end }}
+        {{ if .Params.contacts.telegram }}
+          <li><i class="fab fa-telegram"></i> <a href="{{ .Params.contacts.telegram }}" target="_blank">Telegram</a></li>
+        {{ end }}
+      </ul>
+    </div>
   {{ end }}  
 </article>
 {{ end }}

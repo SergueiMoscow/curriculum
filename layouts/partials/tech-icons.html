@@ -1,0 +1,20 @@
+<p><strong>{{ i18n "technologies" }}:</strong>
+  {{ range $index, $tech := . }}
+    {{ if eq $tech "Terraform" }}<i class="devicon-terraform-plain colored"></i>{{ end }}
+    {{ if eq $tech "Docker" }}<i class="devicon-docker-plain colored"></i>{{ end }}
+    {{ if eq $tech "GitHub Actions" }}<i class="devicon-github-plain colored"></i>{{ end }}
+    {{ if eq $tech "FastAPI" }}<i class="devicon-python-plain colored"></i>{{ end }}
+    {{ if eq $tech "Django DRF" }}<i class="devicon-django-plain colored"></i>{{ end }}
+    {{ if eq $tech "GitLab" }}<i class="devicon-gitlab-plain colored"></i>{{ end }}
+    {{ if eq $tech "PHP" }}<i class="devicon-php-plain colored"></i>{{ end }}
+    {{ if eq $tech "PostgreSQL" }}<i class="devicon-postgresql-plain colored"></i>{{ end }}
+    {{ if eq $tech "HTML" }}<i class="devicon-html5-plain colored"></i>{{ end }}
+    {{ if eq $tech "CSS" }}<i class="devicon-css3-plain colored"></i>{{ end }}
+    {{ if eq $tech "Vue.js" }}<i class="devicon-vuejs-plain colored"></i>{{ end }}
+    {{ if eq $tech "C++" }}<i class="devicon-cplusplus-plain colored"></i>{{ end }}
+    {{ if eq $tech "JQuery" }}<i class="devicon-jquery-plain colored"></i>{{ end }}
+    {{ if eq $tech "Kubernetes" }}<i class="devicon-kubernetes-plain colored"></i>{{ end }}
+    {{ $tech }}
+    {{ if not (eq $index (sub (len $) 1)) }},{{ end }}
+  {{ end }}
+</p>

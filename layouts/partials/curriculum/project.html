@@ -1,16 +1,25 @@
 <div class="project-item">
-  <h3>{{ .title }}</h3>
-  <p>{{ .city }} | {{ .start_date }} - {{ if .end_date }}{{ .end_date }}{{ else }}Present{{ end }}</p>
-  {{ if .website }}
-    <p><a href="{{ .website }}" target="_blank">Мой GitHub</a></p>
+  <h3>{{ .item.title }}</h3>
+  {{ $lang := .context.Lang | default "ru" }}
+  <div>Debug (partial/project): Lang={{ .context.Lang }}</div>
+  {{ if eq $lang "ru" }}
+    <p>{{ .item.city }} | {{ .item.date_str }}</p>
+  {{ else }}
+    {{ if .item.start_date }}
+      <p>{{ .item.city }} | {{ .item.start_date | time.Format (i18n "dateFormat") }} - {{ if .item.end_date }}{{ .item.end_date | time.Format (i18n "dateFormat") }}{{ else }}{{ i18n "present" }}{{ end }}</p>
+    {{ else }}
+      <p>{{ .item.city }} | {{ .item.date_str }}</p>
+    {{ end }}
+  {{ end }}
+  {{ if .item.website }}
+    <p><a href="{{ .item.website }}" target="_blank">{{ i18n "myGitHub" }}</a></p>
   {{ end }}
   <ul>
-    {{ range .responsibilities }}
+    {{ range .item.responsibilities }}
       <li>{{ . | safeHTML }}</li>
     {{ end }}
   </ul>
-  {{ if .technologies }}
-    <p><strong>{{ i18n "technologies" }}:</strong> {{ delimit .technologies ", " }}</p>
-  {{ end }}  
-
+  {{ if .item.technologies }}
+    {{ partial "tech-icons.html" .item.technologies }}
+  {{ end }}
 </div>

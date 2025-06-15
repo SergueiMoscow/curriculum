@@ -1,32 +1,34 @@
 <div class="education-item">
-  <!-- Левая колонка: текст (75%) -->
   <div class="text-content">
-    <h3>{{ .title }}</h3>
-    <h4>{{ .institution }}</h4>
-    {{ $lang := .Site.LanguageCode }}
+    <h3>{{ .item.title }}</h3>
+    <h4>{{ .item.institution }}</h4>
+    {{ $lang := .context.Lang | default "ru" }}
+    <div>Debug (partial/education): Lang={{ .context.Lang }}</div>
     {{ if eq $lang "ru" }}
-      <p>{{ .city }} | {{ .date_str }}</p>
+      <p>{{ .item.city }} | {{ .item.date_str }}</p>
     {{ else }}
-      <p>{{ .city }} | {{ .start_date | time.Format (i18n "dateFormat") }} - {{ if .end_date }}{{ .end_date | time.Format (i18n "dateFormat") }}{{ else }}{{ i18n "present" }}{{ end }}</p>
-    {{ end }}
-
-    {{ if .desc }}
-    <ul>
-      {{ range .desc }}
-        <li>{{ . }}</li>
+      {{ if .item.start_date }}
+        <p>{{ .item.city }} | {{ .item.start_date | time.Format (i18n "dateFormat") }} - {{ if .item.end_date }}{{ .item.end_date | time.Format (i18n "dateFormat") }}{{ else }}{{ i18n "present" }}{{ end }}</p>
+      {{ else }}
+        <p>{{ .item.city }} | {{ .item.date_str }}</p>
       {{ end }}
-    </ul>
+    {{ end }}
+    {{ if .item.desc }}
+      <ul>
+        {{ range .item.desc }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+    {{ if .item.technologies }}
+      {{ partial "tech-icons.html" .item.technologies }}
     {{ end }}
   </div>
-  <!-- Правая колонка: thumbnail (25%) -->
-  {{ if .thumbnail }}
-  <div style="flex: 1; min-width: 100px; text-align: center;">
-    <a href="{{ .diploma | relURL }}" target="_blank">
-      <img src="{{ .thumbnail | relURL }}" alt="Диплом {{ .title }}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;">
-    </a>
-  </div>
+  {{ if .item.thumbnail }}
+    <div style="flex: 1; min-width: 100px; text-align: center;">
+      <a href="{{ .item.diploma | relURL }}" target="_blank">
+        <img src="{{ .item.thumbnail | relURL }}" alt="Диплом {{ .item.title }}" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;">
+      </a>
+    </div>
   {{ end }}
-  {{ if .technologies }}
-    <p><strong>Технологии:</strong> {{ delimit .technologies ", " }}</p>
-  {{ end }}  
 </div>

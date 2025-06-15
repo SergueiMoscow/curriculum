@@ -1,20 +1,24 @@
 <div class="experience-item">
-  <h3>{{ .title }}</h3>
-  <h4>{{ .company }}</h4>
-  <h5>{{ .industry }}</h5>
-  {{ $lang := .Site.LanguageCode }}
+  <h3>{{ .item.title }}</h3>
+  <h4>{{ .item.company }}</h4>
+  <h5>{{ .item.industry }}</h5>
+  {{ $lang := .context.Lang | default "ru" }}
+  <div>Debug (partial/work): Lang={{ .context.Lang }}</div>
   {{ if eq $lang "ru" }}
-    <p>{{ .city }} | {{ .date_str }}</p>
+    <p>{{ .item.city }} | {{ .item.date_str }}</p>
   {{ else }}
-    <p>{{ .city }} | {{ .start_date | time.Format (i18n "dateFormat") }} - {{ if .end_date }}{{ .end_date | time.Format (i18n "dateFormat") }}{{ else }}{{ i18n "present" }}{{ end }}</p>
+    {{ if .item.start_date }}
+      <p>{{ .item.city }} | {{ .item.start_date | time.Format (i18n "dateFormat") }} - {{ if .item.end_date }}{{ .item.end_date | time.Format (i18n "dateFormat") }}{{ else }}{{ i18n "present" }}{{ end }}</p>
+    {{ else }}
+      <p>{{ .item.city }} | {{ .item.date_str }}</p>
+    {{ end }}
   {{ end }}
-
   <ul>
-    {{ range .responsibilities }}
+    {{ range .item.responsibilities }}
       <li>{{ . }}</li>
     {{ end }}
   </ul>
-  {{ if .technologies }}
-    <p><strong>{{ i18n "technologies" }}:</strong> {{ delimit .technologies ", " }}</p>
-  {{ end }}  
+  {{ if .item.technologies }}
+    {{ partial "tech-icons.html" .item.technologies }}
+  {{ end }}
 </div>

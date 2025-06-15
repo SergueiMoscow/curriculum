@@ -7,6 +7,8 @@ website: "https://aztechventures.com/"
 industry: "Software"
 start_date: "2004-01-01"
 end_date: "2023-03-31"
+date_str: "Январь 2023 - Март 2023"
+
 responsibilities:
   - Создание и сопровождение web-приложений.
   - Оптимизация кода.
@@ -16,7 +18,8 @@ responsibilities:
   - Реализовал модуль контроля изменений в процедурах и функциях БД MySQL и PostgreSQL.
 technologies:
   - PHP
-  - Postgresql
+  - PostgreSQL
   - HTML
   - CSS
+  - JQuery
 ---

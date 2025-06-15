@@ -1,12 +1,12 @@
-/public/          # Собранный сайт (генерируется командой `hugo`)
-/resources/_gen/  # Кешированные ресурсы (изображения и т.д.)
+/public/
+/resources/_gen/
 
 .hugo_build.lock  # Лок-файл сборки
 
-.env              # Переменные окружения
-.idea/           # Для JetBrains IDE
-.vscode/         # Для VS Code
-*.swp            # Vim swap-файлы
+.env
+.idea/
+.vscode/
+*.swp
 
 .DS_Store
 Thumbs.db

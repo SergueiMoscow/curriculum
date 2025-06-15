@@ -582,3 +582,35 @@ a:hover {
     height: 60px;
   }
 }
+
+/* Стили для иконок Devicon */
+.tech-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Адаптация иконок для тёмной темы */
+body.dark-theme .tech-icon {
+  filter: brightness(1.1); /* Слегка увеличиваем яркость иконок в тёмной теме */
+}
+
+/* Стили для списка технологий в опыте и проектах */
+.experience-item p .tech-icon,
+.project-item p .tech-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Стили для списка навыков */
+.skills ul li .tech-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Уменьшаем отступы в списке навыков */
+.skills ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
