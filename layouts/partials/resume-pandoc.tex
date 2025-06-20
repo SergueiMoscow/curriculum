@@ -17,6 +17,8 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+% Images
+\usepackage{graphicx}
 % Defining fonts
 \usepackage{noto}
 \renewcommand{\familydefault}{\sfdefault}
@@ -26,19 +28,27 @@
     \textbf{\huge $title$}
 \end{center}
 \vspace{0.5cm}
-% Contacts
-\textbf{Контакты} \\
-$if(contacts.email)$ Email: \href{mailto:$contacts.email$}{$contacts.email$} \\ $endif$
-$if(contacts.linkedin)$ LinkedIn: \href{$contacts.linkedin$}{linkedin.com} \\ $endif$
-$if(contacts.telegram)$ Telegram: \href{$contacts.telegram$}{t.me} \\ $endif$
-$if(contacts.phone)$ Телефон: $contacts.phone$ \\ $endif$
+% Contacts with photo
+\begin{minipage}[t]{0.6\textwidth}
+    \vspace*{0pt}
+    \textbf{Контакты} \\
+    $if(contacts.email)$ Email: \href{mailto:$contacts.email$}{$contacts.email$} \\ $endif$
+    $if(contacts.linkedin)$ LinkedIn: \href{$contacts.linkedin$}{linkedin.com} \\ $endif$
+    $if(contacts.telegram)$ Telegram: \href{$contacts.telegram$}{t.me} \\ $endif$
+    $if(contacts.phone)$ Телефон: $contacts.phone$ \\ $endif$
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+    \vspace*{0pt}
+    \raggedleft
+    \includegraphics[width=0.8\textwidth,keepaspectratio]{static/img/avatar02.png}
+\end{minipage}
 \vspace{0.5cm}
 % About
-\textbf{О себе} \\
+\section*{О себе}
 $about$
 \vspace{0.5cm}
 % Skills
-\textbf{Навыки} \\
+\section*{Навыки}
 \begin{itemize}
 $for(skills)$
     \item $skills$
@@ -46,7 +56,7 @@ $endfor$
 \end{itemize}
 \vspace{0.5cm}
 % Experience
-\textbf{Опыт работы} \\
+\section*{Опыт работы}
 $for(experience)$
     \textbf{$experience.company$} \hfill $experience.date_str$ \\
     $experience.title$, $experience.city$ \\
@@ -70,7 +80,7 @@ $for(experience)$
     \vspace{0.2cm}
 $endfor$
 % Education
-\textbf{Образование} \\
+\section*{Образование}
 $for(education)$
     $if(education.institution)$ \textbf{$education.institution$} \hfill $education.date_str$ \\ $endif$
     $education.title$, $education.city$ \\
@@ -85,7 +95,7 @@ $for(education)$
     \vspace{0.2cm}
 $endfor$
 % Projects
-\textbf{Проекты} \\
+\section*{Проекты}
 $for(projects)$
     \textbf{$projects.title$} \\
     $if(projects.desc)$ $projects.desc$ \\ $endif$
