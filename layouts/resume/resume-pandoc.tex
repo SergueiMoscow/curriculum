@@ -1,0 +1,136 @@
+\documentclass[a4paper,10pt]{article}
+% Encoding and language
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english,spanish]{babel}
+% Fonts
+\usepackage[T2A]{fontenc}
+\usepackage[scaled]{helvet}
+% Layout
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+% Colors and hyperlinks
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+% Images
+\usepackage{graphicx}
+% Conditional logic
+\usepackage{ifthen}
+% Defining fonts
+\usepackage{noto}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+% Title
+\begin{center}
+    \textbf{\huge $title$}
+\end{center}
+% \vspace{0.5cm}
+% Contacts with photo
+\begin{minipage}[c]{0.6\textwidth}
+    \vspace*{10mm}
+    \Large % Устанавливаем размер шрифта для заголовка, как у \section*
+    \ifthenelse{\equal{$lang$}{ru-RU}}{\textbf{Контакты}}{\ifthenelse{\equal{$lang$}{en-US}}{\textbf{Contacts}}{\textbf{Contactos}}} \\
+    \par\vspace*{1mm}
+    \large % Возвращаем \large для строк контактов
+    $if(contacts.phone)$ \ifthenelse{\equal{$lang$}{ru-RU}}{Телефон}{\ifthenelse{\equal{$lang$}{en-US}}{Phone}{Teléfono}}: $contacts.phone$ \\ $endif$
+    \par\vspace*{1mm}
+    $if(contacts.email)$ Email: \href{mailto:$contacts.email$}{$contacts.email$} \\ $endif$
+    \par\vspace*{1mm}
+    $if(contacts.telegram)$ Telegram: \href{https://t.me/$contacts.telegram$}{t.me} \\ $endif$
+    \par\vspace*{1mm}
+    $if(contacts.linkedin)$ \ifthenelse{\equal{$lang$}{ru-RU}}{LinkedIn}{\ifthenelse{\equal{$lang$}{en-US}}{LinkedIn}{LinkedIn}}: \href{https://$contacts.linkedin$}{linkedin.com} \\ $endif$
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+    \vspace*{-15mm}
+    \raggedleft
+    \includegraphics[width=0.8\textwidth,keepaspectratio]{static/img/avatar02.png}
+\end{minipage}
+\vspace*{0pt}
+% About
+\ifthenelse{\equal{$lang$}{ru-RU}}{\section*{О себе}}{\ifthenelse{\equal{$lang$}{en-US}}{\section*{About Me}}{\section*{Sobre Mí}}}
+$about$
+\vspace{0.5cm}
+% Skills
+\ifthenelse{\equal{$lang$}{ru-RU}}{\section*{Навыки}}{\ifthenelse{\equal{$lang$}{en-US}}{\section*{Skills}}{\section*{Habilidades}}}
+\begin{itemize}
+$for(skills)$
+    \item $skills$
+$endfor$
+\end{itemize}
+\vspace{0.5cm}
+% Experience
+\ifthenelse{\equal{$lang$}{ru-RU}}{\section*{Опыт работы}}{\ifthenelse{\equal{$lang$}{en-US}}{\section*{Work Experience}}{\section*{Experiencia Laboral}}}
+$for(experience)$
+    \textbf{$experience.company$} \hfill $experience.date_str$ \\
+    $experience.title$, $experience.city$ \\
+    $if(experience.desc)$ $experience.desc$ \\ $endif$
+    $if(experience.responsibilities)$
+    \ifthenelse{\equal{$lang$}{ru-RU}}{\textit{Обязанности:}}{\ifthenelse{\equal{$lang$}{en-US}}{\textit{Responsibilities:}}{\textit{Responsabilidades:}}} \\
+    \begin{itemize}
+        $for(experience.responsibilities)$
+        \item $experience.responsibilities$
+        $endfor$
+    \end{itemize}
+    $endif$
+    $if(experience.technologies)$
+    \ifthenelse{\equal{$lang$}{ru-RU}}{\textit{Технологии:}}{\ifthenelse{\equal{$lang$}{en-US}}{\textit{Technologies:}}{\textit{Tecnologías:}}} \\
+    \begin{itemize}
+        $for(experience.technologies)$
+        \item $experience.technologies$
+        $endfor$
+    \end{itemize}
+    $endif$
+    \vspace{0.2cm}
+$endfor$
+% Education
+\ifthenelse{\equal{$lang$}{ru-RU}}{\section*{Образование}}{\ifthenelse{\equal{$lang$}{en-US}}{\section*{Education}}{\section*{Educación}}}
+$for(education)$
+    $if(education.institution)$ \textbf{$education.institution$} \hfill $education.date_str$ \\ $endif$
+    $education.title$, $education.city$ \\
+    $if(education.desc)$
+    \ifthenelse{\equal{$lang$}{ru-RU}}{\textit{Описание:}}{\ifthenelse{\equal{$lang$}{en-US}}{\textit{Description:}}{\textit{Descripción:}}} \\
+    \begin{itemize}
+        $for(education.desc)$
+        \item $education.desc$
+        $endfor$
+    \end{itemize}
+    $endif$
+    $if(education.technologies)$
+    \ifthenelse{\equal{$lang$}{ru-RU}}{\textit{Технологии:}}{\ifthenelse{\equal{$lang$}{en-US}}{\textit{Technologies:}}{\textit{Tecnologías:}}} \\
+    \begin{itemize}
+        $for(education.technologies)$
+        \item $education.technologies$
+        $endfor$
+    \end{itemize}
+    $endif$
+    \vspace{0.2cm}
+$endfor$
+% Projects
+\ifthenelse{\equal{$lang$}{ru-RU}}{\section*{Проекты}}{\ifthenelse{\equal{$lang$}{en-US}}{\section*{Projects}}{\section*{Proyectos}}}
+$for(projects)$
+    \textbf{$projects.title$} \\
+    $if(projects.desc)$ $projects.desc$ \\ $endif$
+    $if(projects.responsibilities)$
+    \ifthenelse{\equal{$lang$}{ru-RU}}{\textit{Обязанности:}}{\ifthenelse{\equal{$lang$}{en-US}}{\textit{Responsibilities:}}{\textit{Responsabilidades:}}} \\
+    \begin{itemize}
+        $for(projects.responsibilities)$
+        \item $projects.responsibilities$
+        $endfor$
+    \end{itemize}
+    $endif$
+    $if(projects.technologies)$
+    \ifthenelse{\equal{$lang$}{ru-RU}}{\textit{Технологии:}}{\ifthenelse{\equal{$lang$}{en-US}}{\textit{Technologies:}}{\textit{Tecnologías:}}} \\
+    \begin{itemize}
+        $for(projects.technologies)$
+        \item $projects.technologies$
+        $endfor$
+    \end{itemize}
+    $endif$
+    \vspace{0.2cm}
+$endfor$
+\end{document}

@@ -1,7 +1,6 @@
 <div class="project-item">
   <h3>{{ .item.title }}</h3>
   {{ $lang := .context.Lang | default "ru" }}
-  <div>Debug (partial/project): Lang={{ .context.Lang }}</div>
   {{ if eq $lang "ru" }}
     <p>{{ .item.city }} | {{ .item.date_str }}</p>
   {{ else }}

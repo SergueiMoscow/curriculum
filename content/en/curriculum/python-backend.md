@@ -30,6 +30,6 @@ contacts:
   linkedin: "https://www.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-%D1%81%D1%83%D1%88%D0%BA%D0%BE%D0%B2-05682863/"
   telegram: "https://t.me/Serguei_Sushkov"
   phone: "+7 916 242 8131"
-resume: "sushkov_python.pdf"
+resume: "sushkov_python_en.pdf"
 layout: "curriculum"
 ---
