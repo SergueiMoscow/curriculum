@@ -1,0 +1,25 @@
+---
+title: "DevOps Training, Freelance"
+institution: "Netology"
+position: ""
+city: "Moscow"
+website: "https://github.com/SergueiMoscow"
+industry: ""
+date_str: "September 2024 - May 2025"
+start_date: "2024-09-01"
+end_date: "2025-05-01"
+desc:
+  - "Training in the DevOps Engineer course at Netology"
+  - "Freelance work"
+  - "Creating educational and personal projects"
+thumbnail: "/img/diplomas/devops_200.jpg"
+diploma: "/img/diplomas/Diplom_DevOps.pdf"
+technologies:
+  - "Docker"
+  - "Terraform"
+  - "Packer"
+  - "Vagrant"
+  - "Prometheus"
+  - "Grafana"
+  - "Kubernetes"
+---

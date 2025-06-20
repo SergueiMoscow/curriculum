@@ -1,0 +1,25 @@
+---
+title: "Software Developer"
+company: "Aztech Ventures"
+city: "Mexico"
+website: "https://aztechventures.com/"
+industry: "Software"
+start_date: "2004-01-01"
+end_date: "2023-03-31"
+date_str: "January 2004 - March 2023"
+desc: "Periodic remote work with breaks (4-6 months of active work per year)."
+responsibilities:
+  - "Development and maintenance of web applications."
+  - "Code optimization."
+  - "Implemented configurable data entry forms."
+  - "Developed fiscal data and bank statement import module with subsequent accounting entries generation."
+  - "Refactored API and back-end database."
+  - "Implemented change control module for MySQL and PostgreSQL stored procedures and functions."
+technologies:
+  - "PHP"
+  - "PostgreSQL"
+  - "MySQL"
+  - "HTML"
+  - "CSS"
+  - "jQuery"
+---

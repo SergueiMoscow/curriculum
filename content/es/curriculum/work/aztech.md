@@ -1,0 +1,25 @@
+---
+title: "Desarrollador de Software"
+company: "Aztech Ventures"
+city: "México"
+website: "https://aztechventures.com/"
+industry: "Software"
+start_date: "2004-01-01"
+end_date: "2023-03-31"
+date_str: "Enero 2004 - Marzo 2023"
+desc: "Trabajo remoto periódico con interrupciones (4-6 meses de trabajo activo por año)."
+responsibilities:
+  - "Desarrollo y mantenimiento de aplicaciones web."
+  - "Optimización de código."
+  - "Implementé formularios configurables para entrada de datos."
+  - "Desarrollé módulo de importación de datos fiscales y extractos bancarios con posterior generación de asientos contables."
+  - "Refactoricé API y base de datos en el back-end."
+  - "Implementé módulo de control de cambios para procedimientos y funciones almacenadas en MySQL y PostgreSQL."
+technologies:
+  - "PHP"
+  - "PostgreSQL"
+  - "MySQL"
+  - "HTML"
+  - "CSS"
+  - "jQuery"
+---
