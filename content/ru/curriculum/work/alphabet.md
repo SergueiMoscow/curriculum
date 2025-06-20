@@ -13,7 +13,7 @@ responsibilities:
   - "Infrastructure: Развертывание Linode через Terraform."
   - "CI/CD: Сборка Docker-образов и деплой через GitHub."
   - "Orchestration: Запуск и проверка контейнеризованных сервисов."
-  - Удалённо, part-time.
+  - "Удалённо, part-time."
 technologies:
   - Terraform
   - Docker

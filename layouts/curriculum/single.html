@@ -1,6 +1,13 @@
 {{ define "main" }}
 <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 <article>
+  {{ if .Params.resume }}
+    <div class="resume-download">
+      <a href="{{ printf "/%s" .Params.resume | relURL }}" download="{{ i18n "downloadResume" | default "Скачать резюме в PDF" }}">
+        <i class="fas fa-file-pdf"></i> {{ i18n "downloadResume" | default "Скачать резюме в PDF" }}
+      </a>
+    </div>
+  {{ end }}
   {{ if .Params.experience }}
     <h2>{{ i18n "experience" }}</h2>
     {{ range $idx, $path := .Params.experience }}
@@ -85,6 +92,9 @@
         {{ end }}
         {{ if .Params.contacts.telegram }}
           <li><i class="fab fa-telegram"></i> <a href="{{ .Params.contacts.telegram }}" target="_blank">Telegram</a></li>
+        {{ end }}
+        {{ if .Params.contacts.phone }}
+          <li><i class="fas fa-phone"></i> {{ .Params.contacts.phone }}</li>
         {{ end }}
       </ul>
     </div>

@@ -1,6 +1,6 @@
 ---
 title: "Обучение Android developer"
-institution: ""
+institution: "Учебный Центр Профессионального Образования"
 position: ""
 city: "Москва"
 website: "https://github.com/SergueiMoscow"

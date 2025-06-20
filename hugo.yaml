@@ -4,7 +4,7 @@ defaultContentLanguageInSubdir: true
 theme: ananke
 
 params:
-  avatar: "/img/avatar02.png"  # Путь от папки `static/`
+  avatar: "/img/avatar02.png"
 
   siteName:
     ru: "Профессиональный путь: DevOps и разработка"

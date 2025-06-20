@@ -1,0 +1,102 @@
+\documentclass[a4paper,10pt]{article}
+% Encoding and language
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+% Fonts
+\usepackage[T2A]{fontenc}
+\usepackage[scaled]{helvet}
+% Layout
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+% Colors and hyperlinks
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+% Defining fonts
+\usepackage{noto}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+% Title
+\begin{center}
+    \textbf{\huge $title$}
+\end{center}
+\vspace{0.5cm}
+% Contacts
+\textbf{Контакты} \\
+$if(contacts.email)$ Email: \href{mailto:$contacts.email$}{$contacts.email$} \\ $endif$
+$if(contacts.linkedin)$ LinkedIn: \href{$contacts.linkedin$}{linkedin.com} \\ $endif$
+$if(contacts.telegram)$ Telegram: \href{$contacts.telegram$}{t.me} \\ $endif$
+$if(contacts.phone)$ Телефон: $contacts.phone$ \\ $endif$
+\vspace{0.5cm}
+% About
+\textbf{О себе} \\
+$about$
+\vspace{0.5cm}
+% Skills
+\textbf{Навыки} \\
+\begin{itemize}
+$for(skills)$
+    \item $skills$
+$endfor$
+\end{itemize}
+\vspace{0.5cm}
+% Experience
+\textbf{Опыт работы} \\
+$for(experience)$
+    \textbf{$experience.company$} \hfill $experience.date_str$ \\
+    $experience.title$, $experience.city$ \\
+    $if(experience.desc)$ $experience.desc$ \\ $endif$
+    $if(experience.responsibilities)$
+    \textit{Обязанности:} \\
+    \begin{itemize}
+        $for(experience.responsibilities)$
+        \item $experience.responsibilities$
+        $endfor$
+    \end{itemize}
+    $endif$
+    $if(experience.technologies)$
+    \textit{Технологии:} \\
+    \begin{itemize}
+        $for(experience.technologies)$
+        \item $experience.technologies$
+        $endfor$
+    \end{itemize}
+    $endif$
+    \vspace{0.2cm}
+$endfor$
+% Education
+\textbf{Образование} \\
+$for(education)$
+    $if(education.institution)$ \textbf{$education.institution$} \hfill $education.date_str$ \\ $endif$
+    $education.title$, $education.city$ \\
+    $if(education.technologies)$
+    \textit{Технологии:} \\
+    \begin{itemize}
+        $for(education.technologies)$
+        \item $education.technologies$
+        $endfor$
+    \end{itemize}
+    $endif$
+    \vspace{0.2cm}
+$endfor$
+% Projects
+\textbf{Проекты} \\
+$for(projects)$
+    \textbf{$projects.title$} \\
+    $if(projects.desc)$ $projects.desc$ \\ $endif$
+    $if(projects.technologies)$
+    \textit{Технологии:} \\
+    \begin{itemize}
+        $for(projects.technologies)$
+        \item $projects.technologies$
+        $endfor$
+    \end{itemize}
+    $endif$
+    \vspace{0.2cm}
+$endfor$
+\end{document}

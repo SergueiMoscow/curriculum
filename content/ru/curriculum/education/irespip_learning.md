@@ -3,9 +3,9 @@ title: ""
 institution: "Институт Рыночной Экономики, Социальной Политики и Права"
 city: "Москва"
 website: "https://github.com/SergueiMoscow"
-start_date: "2003-03-01"
-end_date: "2008-12-01"
-date_str: "Ноябрь-декабрь 2022"
+start_date: "2003-09-01"
+end_date: "2008-06-01"
+date_str: "2003 - 2008"
 desc:
   - Получен диплом о высшем образовании, присуждена степень Бакалавра экономики по направлению "Экономика".
 thumbnail: /img/diplomas/irespip_200.jpg

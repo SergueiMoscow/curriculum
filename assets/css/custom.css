@@ -614,3 +614,22 @@ body.dark-theme .tech-icon {
   align-items: center;
   margin-bottom: 0.5rem;
 }
+
+.resume-download {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.resume-download a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resume-download a:hover {
+  text-decoration: underline;
+}
+
+.resume-download i {
+  margin-right: 5px;
+}

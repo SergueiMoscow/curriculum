@@ -1,0 +1,5 @@
+{{ define "main" }}
+  {{ $target := printf "/%s/curriculum/python-backend/" .Site.Language.Lang }}
+  <meta http-equiv="refresh" content="0; url={{ $target | relURL }}">
+  <p>Перенаправление на <a href="{{ $target | relURL }}">резюме</a>...</p>
+{{ end }}
