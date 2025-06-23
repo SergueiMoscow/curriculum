@@ -3,6 +3,7 @@ version: '3.8'
 services:
   hugo-site:
     build: .
+    container_name: curriculum
     ports:
       - "${PORT}:80"
     restart: unless-stopped
