@@ -1,24 +1,27 @@
-# Этап сборки
-FROM klakegg/hugo:0.107.0-ext-ubuntu AS builder
+# Этап сборки с установкой нужной версии Hugo
+FROM ubuntu:22.04 AS builder
+
+# Устанавливаем зависимости и Hugo
+RUN apt-get update && apt-get install -y \
+    wget \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Скачиваем и устанавливаем Hugo Extended
+ARG HUGO_VERSION=0.147.3
+RUN wget -O hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" \
+    && dpkg -i hugo.deb \
+    && rm hugo.deb
 
 # Копируем исходный код
 WORKDIR /src
 COPY . .
 
-# Собираем сайт (Hugo будет использовать конфиг по умолчанию)
-RUN hugo --minify
+# Собираем сайт
+RUN hugo --minify --source /src
 
-# Финальный образ
+# Финальный образ с Nginx
 FROM nginx:alpine
-
-# Копируем собранный сайт из этапа builder
 COPY --from=builder /src/public /usr/share/nginx/html
-
-# Копируем конфиг nginx (если нужно)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Открываем порт 80
 EXPOSE 80
-
-# Команда для запуска nginx
 CMD ["nginx", "-g", "daemon off;"]
