@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  hugo-site:
+    build: .
+    ports:
+      - "${PORT}:80"
+    restart: unless-stopped
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
