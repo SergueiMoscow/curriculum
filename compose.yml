@@ -7,5 +7,5 @@ services:
     ports:
       - "${PORT}:80"
     restart: unless-stopped
-    volumes:
-      - ./public:/usr/share/nginx/html:ro
+    # volumes:
+    #   - ./public:/usr/share/nginx/html:ro

@@ -1,7 +1,8 @@
-baseURL: https://example.org/
+baseURL: https://resume.sushkovs.ru/
 defaultContentLanguage: ru
 defaultContentLanguageInSubdir: true
 theme: ananke
+publishDir: "public"
 
 params:
   avatar: "/img/avatar02.png"
