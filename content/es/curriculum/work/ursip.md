@@ -1,10 +1,9 @@
 ---
 title: "Desarrollador Backend Python"
 company: "URSiP"
-lang: "ru"
 position: ""
 city: "Moscú"
-website: ""
+website: "https://ursip.ru"
 industry: "Desarrollo de Software"
 start_date: "2023-08-01"
 end_date: "2023-12-31"
