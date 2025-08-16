@@ -8,11 +8,13 @@ industry: "Software"
 start_date: "2025-05-20"
 # end_date: "2025-12-31"
 date_str: "Май 2025 - по настоящее время"
-desc: Удалённая работа (2–4 часа/день) в стартапе из Мехико. Планируется внедрение Kubernetes.
+desc: Удалённая работа (2–4 часа/день) в стартапе из Мехико.
 responsibilities:
   - "Infrastructure: Развертывание Linode через Terraform."
   - "CI/CD: Сборка Docker-образов и деплой через GitHub."
   - "Orchestration: Запуск и проверка контейнеризованных сервисов."
+  - Развёртывание приватного Docker Registry
+  - Настройка Kubernetes с деплоем приложений из приватного Docker Registry  
   - "Удалённо, part-time."
 technologies:
   - Terraform
